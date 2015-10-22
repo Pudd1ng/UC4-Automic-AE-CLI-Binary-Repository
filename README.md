@@ -2,11 +2,11 @@
 
 **Repository of all CLI Binaries (all compiled CLI projects)**
 
-## Purpose:
+# Purpose:
 
 provide a repository of **Command Line Interface Binaries** in order to extend the capabilities that the UI currently offers.
 
-## Design:
+# Design:
 
 => **Each binary takes at least 2 possible flags/options:**
 *-help: displays the list of AE Connection Parameters that can be specified (if overriding the parameters contained in connection.config file)*
