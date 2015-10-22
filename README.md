@@ -9,8 +9,8 @@ provide a repository of **Command Line Interface Binaries** in order to extend t
 ## Design:
 
 **Each binary takes at least 2 possible flags/options:**
-* -help: displays the list of AE Connection Parameters that can be specified (if overriding the parameters contained in connection.config file)
-* -h:    displays the list of parameters (Mandatory, Optional etc.) required specifically for each binary
+* **-help**: displays the list of AE Connection Parameters that can be specified (if overriding the parameters contained in connection.config file)
+* **-h**:    displays the list of parameters (Mandatory, Optional etc.) required specifically for each binary
 	
 		 
 **Each binary is designed to be SAFE: it will NOT modify / update / delete / create / execute anything UNLESS the -commit flag is added as a parameter.**
