@@ -1,4 +1,4 @@
-## UC4-Automic-AE-CLI-Binary-Repository
+# UC4-Automic-AE-CLI-Binary-Repository
 
 **Repository of all CLI Binaries (all compiled CLI projects)**
 
@@ -8,12 +8,12 @@ provide a repository of **Command Line Interface Binaries** in order to extend t
 
 # Design:
 
-=> **Each binary takes at least 2 possible flags/options:**
+##=> **Each binary takes at least 2 possible flags/options:**
 *-help: displays the list of AE Connection Parameters that can be specified (if overriding the parameters contained in connection.config file)*
 *-h:    displays the list of parameters (Mandatory, Optional etc.) required specifically for each binary*
 	
 		
-=> **Each binary is designed to be SAFE: it will NOT modify / update / delete / create / execute anything UNLESS the -commit flag is added as a parameter.**
+##=> **Each binary is designed to be SAFE: it will NOT modify / update / delete / create / execute anything UNLESS the -commit flag is added as a parameter.**
 		ex: OBJECTS_Delete.jar -name "*" => will NOT delete any objects, but instead will run a simulation of Objects to be deleted
 			OBJECTS_Delete.jar -name "*" -commit => will delete ALL objects or ALL types (you should probably never use this command as-is ;)).
 		ex:	TASKS_Operations.jar -f_name ".*" -f_status ".*aborted.*" -u_restart "*" => will NOT restart anything, but instead will run a simulation of Tasks to be restarted
