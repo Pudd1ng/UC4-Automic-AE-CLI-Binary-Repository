@@ -14,7 +14,7 @@ provide a repository of **Command Line Interface Binaries** in order to extend t
 	
 		 
 **Each binary is designed to be SAFE: it will NOT modify / update / delete / create / execute anything UNLESS the -commit flag is added as a parameter.**
-examples: 
+## examples: 
 * OBJECTS_Delete.jar -name "*" => will NOT delete any objects, but instead will run a simulation of Objects to be deleted
 * OBJECTS_Delete.jar -name "*" -commit => will delete ALL objects or ALL types (you should probably never use this command as-is ;)).
 * TASKS_Operations.jar -f_name ".*" -f_status ".*aborted.*" -u_restart "*" => will NOT restart anything, but instead will run a simulation of Tasks to be restarted
