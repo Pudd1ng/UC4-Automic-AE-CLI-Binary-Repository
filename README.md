@@ -1,13 +1,13 @@
 ## UC4-Automic-AE-CLI-Binary-Repository
-	** Repository of all CLI Binaries (all compiled CLI projects) **
+** Repository of all CLI Binaries (all compiled CLI projects) **
 
 ## Purpose:
 
-	provide a repository of ** Command Line Interface Binaries ** in order to extend the capabilities that the UI currently offers.
+provide a repository of ** Command Line Interface Binaries ** in order to extend the capabilities that the UI currently offers.
 
 ## Design:
 
-	=> **Each binary takes at least 2 possible flags/options:**
+=> **Each binary takes at least 2 possible flags/options:**
 		-help: displays the list of AE Connection Parameters that can be specified (if overriding the parameters contained in connection.config file)
 		-h:    displays the list of parameters (Mandatory, Optional etc.) required specifically for each binary
 		
