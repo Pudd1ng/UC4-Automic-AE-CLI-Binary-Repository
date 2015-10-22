@@ -1,9 +1,9 @@
 ## UC4-Automic-AE-CLI-Binary-Repository
-	**Repository of all CLI Binaries (all compiled CLI projects)**
+	** Repository of all CLI Binaries (all compiled CLI projects) **
 
 ## Purpose:
 
-	provide a repository of **Command Line Interface Binaries** in order to extend the capabilities that the UI currently offers.
+	provide a repository of ** Command Line Interface Binaries ** in order to extend the capabilities that the UI currently offers.
 
 ## Design:
 
