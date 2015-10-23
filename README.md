@@ -50,15 +50,16 @@ provide a repository of **Command Line Interface Binaries** in order to extend t
 		* OBJECTS_Copy_Across_Clients.jar: Copy Objects Across Clients (v11 only for now).
 		* OBJECTS_Create.jar: Create Objects of any type. (ex: create 200 JOBS Objects)
 		* OBJECTS_Duplicate.jar: Duplicate Objects of any type. (ex: duplicate all objects matching name "*AB*PROD*" to "*AB*DEV*" at once)
-		* OBJECTS_Execute: Execute now or schedule later (executable) Objects. (ex: run now all JOBP matching name "*DEV*JOBP*")
-		* OBJECTS_List: -- Legacy Binary. Does not do much.
-		* OBJECTS_Move: Move Objects of any type anywhere (within the same client) (ex: move all objects matching "*PROD*ABC*" to Folder "SANDBOX")
-		* OBJECTS_Rename: Rename Objects of any type (ex: rename objects with title matching ".*Legacy.*" from "*ALPHA*" to "*BETA*")
-		* OBJECTS_Show: -- Legacy Binary. Does not do much.
-		* TASKS_Operations: Handle Operations on Activities Window (Deactivate all "Completed" tasks, restart aborted JOBS tasks with title matching ".*DEV.*")
-		* UTIL_ClientAudit: Extract an Audit Report on Specific Client Usage (ex: number of active objects defined, etc.) 
-		* UTIL_EnvironmentAudit: Extract Environment Wide Usage Report (ex: number of clients defined, etc.)
-
+		* OBJECTS_Execute.jar: Execute now or schedule later (executable) Objects. (ex: run now all JOBP matching name "*DEV*JOBP*")
+		* OBJECTS_List.jar: -- Legacy Binary. Does not do much.
+		* OBJECTS_Move.jar: Move Objects of any type anywhere (within the same client) (ex: move all objects matching "*PROD*ABC*" to Folder "SANDBOX")
+		* OBJECTS_Rename.jar: Rename Objects of any type (ex: rename objects with title matching ".*Legacy.*" from "*ALPHA*" to "*BETA*")
+		* OBJECTS_Show.jar: -- Legacy Binary. Does not do much.
+		* TASKS_Operations.jar: Handle Operations on Activities Window (Deactivate all "Completed" tasks, restart aborted JOBS tasks with title matching ".*DEV.*")
+		* UTIL_ClientAudit.jar: Extract an Audit Report on Specific Client Usage (ex: number of active objects defined, etc.) 
+		* UTIL_EnvironmentAudit.jar: Extract Environment Wide Usage Report (ex: number of clients defined, etc.)
+		* AGENTS_Management.jar: Manage Agents from Client 0 (assign to other clients, delete, etc.) (ex: allow all clients to use Agent WIN01 for Execution)
+		
 ## CONFIGURATION Files:
 
 	connection.config: contains connection parameters. This file is used by all binaries. All the parameters specified in it can be overriden when using any of the binaries. use -help flag to review override parameters.
