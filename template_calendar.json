@@ -1,7 +1,7 @@
 {
-"calname": "CALE.BSP.99",
+"calname": "CALE.BSP.FROMCLI",
 "caltitle": "my Custom Calendar",
-"calfolder": "EC2",
+"calfolder": "CALENDARS",
 "statickeywords": [
 
 		{
@@ -83,9 +83,9 @@
 	{
 		"name": "WORKDAYS",
 		"type": "group",
-		"atleastlist":[{"calendar": "CALE.BSP.99", "keyword": "WEEKDAYS"}],
+		"atleastlist":[{"calendar": "CALE.BSP.FROMCLI", "keyword": "WEEKDAYS"}],
 		"andalllist":[],
-		"andnonelist":[{"calendar": "CALE.BSP.99", "keyword": "HOLIDAYS.CA"},{"calendar": "CALE.BSP.99", "keyword": "HOLIDAYS.US"}]
+		"andnonelist":[{"calendar": "CALE.BSP.FROMCLI", "keyword": "HOLIDAYS.CA"},{"calendar": "CALE.BSP.FROMCLI", "keyword": "HOLIDAYS.US"}]
 	}
 	],
 
@@ -93,14 +93,14 @@
 	{
 		"name": "AFTERHOLIDAYS",
 		"type": "roll",
-		"sourcecalendar":"CALE.BSP.99",
+		"sourcecalendar":"CALE.BSP.FROMCLI",
 		"sourcekeyword":"HOLIDAYS.CA",
 		"adjustval":"+0",
-		"adjustcalendar": "CALE.BSP.99",
+		"adjustcalendar": "CALE.BSP.FROMCLI",
 		"adjustkeyword":"HOLIDAYS.CA",
 		"collisions":[
-			{"withcalendar": "CALE.BSP.99","withkeyword": "WORKDAYS","do": "+","offset": "1","refcalendar":"CALE.BSP.99","refkeyword": "WORKDAYS"},
-			{"withcalendar": "CALE.BSP.99","withkeyword": "WORKDAYS","do": "+","offset": "1","refcalendar":"CALE.BSP.99","refkeyword": "WORKDAYS"}
+			{"withcalendar": "CALE.BSP.FROMCLI","withkeyword": "WORKDAYS","do": "+","offset": "1","refcalendar":"CALE.BSP.FROMCLI","refkeyword": "WORKDAYS"},
+			{"withcalendar": "CALE.BSP.FROMCLI","withkeyword": "WORKDAYS","do": "+","offset": "1","refcalendar":"CALE.BSP.FROMCLI","refkeyword": "WORKDAYS"}
 		]
 	}
 	]
