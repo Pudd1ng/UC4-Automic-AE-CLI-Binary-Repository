@@ -11,32 +11,45 @@ provide a repository of **Command Line Interface Binaries** in order to extend t
 **Each binary takes at least 2 possible flags/options:**
 * **-help**: displays the list of AE Connection Parameters that can be specified (if overriding the parameters contained in connection.config file)
 * **-h**:    displays the list of parameters (Mandatory, Optional etc.) required specifically for each binary
+
+## Connection Parameters:
+
+**Each binary needs to establish a connection to the Automation Engine. The connection parameters can be set either:**
+* directly in the **connection.config** file
+* via CLI parameters (see **-help** option for list of available parameters: **-L login -W pwd -C client -D department -H hostname** etc.)
+* Note: IF a parameter is specified both in connection.config and via a CLI parameter, the CLI parameter takes precedence. 
+
+## CONFIGURATION Files:
+
+* **connection.config**: contains connection parameters. This file is used by all binaries. All the parameters specified in it can be overriden when using any of the binaries. use -help flag to review override parameters.
 	
-		 
-**Each binary is designed to be SAFE: it will NOT modify / update / delete / create / execute anything UNLESS the -commit flag is added as a parameter.**
+## Safety:
+
+Each binary is designed to be SAFE and comes with a **mandatory COMMIT mechanism**: it will NOT modify / update / delete / create / execute anything **UNLESS the -commit flag is added as a parameter.**
 ## examples: 
 * OBJECTS_Delete.jar -name "*" => will NOT delete any objects, but instead will run a simulation of Objects to be deleted
 * OBJECTS_Delete.jar -name "*" -commit => will delete ALL objects or ALL types (you should probably never use this command as-is ;)).
 * TASKS_Operations.jar -f_name ".*" -f_status ".*aborted.*" -u_restart "*" => will NOT restart anything, but instead will run a simulation of Tasks to be restarted
 * TASKS_Operations.jar -f_name ".*" -f_status ".*aborted.*" -u_restart "*" -commit => will restart ALL Tasks marked Aborted in the Activities Window	
 
+## Common Active Parameters: 
+
 **Most binaries have at least 2 sets of parameters available:**
 * **-f_**: Filter Parameters, parameters used to filter only specific objects (ex: -f_type "JOBS" or -f_title ".*[Mm]y [Tt]itle.*") => MOST f_* parameters support Regular Expressions
 * **-u_**: Update Parameters, parapeters used to update various things (ex: -u_process ["192.168.1.123","192.168.1.987"], or -u_title [".+","My New Title"], or -u_priority 100) => most parameters requiring ["A","B"] as a format will accept Regular Expressions for "A". "B" is the substitute String.  
 
-**All binaries that have the ability to modify OBJECTS have the commit flag:**
-* **-commit**: only add this commit once you are sure you want to carry out all modifications (running any command without -commit will run a simulation of all modifications)
+## Other information: 
+
+* **All Binaries leverage the Java Automic API Simplified Framework. Source Code can be found here:** https://github.com/brendanSapience/UC4-Automic---Java-API-Framework-Simplified
 	
-**All Binaries leverage the Java Automic API Simplified Framework. Source Code can be found here:** https://github.com/brendanSapience/UC4-Automic---Java-API-Framework-Simplified
-	
-**All Binaries are self contained, all source code is available (see below), no guarantee is provided.**
+* **All Binaries are self contained, all source code is available (see below), no guarantee is provided.**
 
 ## Compatibility:
 
 	All Binaries compiled with most current version (v11.2) uc4.jar files (meaning it handles STORAGE, PERIOD, XML VARIABLE etc.)
-	Most features (if not all) should work for at least v10 and v9, please test thoroughly in NON-PROD environments
+	Most features (if not all) should work for at least v10 and v9, please test thoroughly in NON-PROD environments.
 
-## List of Binaries
+## List of Binaries:
 
 	**## OBJECT Specific CLI Binaries:**
 
@@ -60,6 +73,4 @@ provide a repository of **Command Line Interface Binaries** in order to extend t
 		* UTIL_EnvironmentAudit.jar: Extract Environment Wide Usage Report (ex: number of clients defined, etc.)
 		* AGENTS_Management.jar: Manage Agents from Client 0 (assign to other clients, delete, etc.) (ex: allow all clients to use Agent WIN01 for Execution)
 		
-## CONFIGURATION Files:
 
-	connection.config: contains connection parameters. This file is used by all binaries. All the parameters specified in it can be overriden when using any of the binaries. use -help flag to review override parameters.
