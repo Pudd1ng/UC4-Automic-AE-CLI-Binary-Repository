@@ -46,8 +46,10 @@ Each binary is designed to be SAFE and comes with a **mandatory COMMIT mechanism
 
 ## Compatibility:
 
-	All Binaries compiled with most current version (v11.2) uc4.jar files (meaning it handles STORAGE, PERIOD, XML VARIABLE etc.)
-	Most features (if not all) should work for at least v10 and v9, please test thoroughly in NON-PROD environments.
+	* Requires Java v1.6 minimum.
+	* All Binaries compiled with most current version (v11.2) uc4.jar files (meaning it handles new objects like STORAGE, PERIOD, XML VARIABLE etc.)
+	* All Binaries (unless indicated) are compatible with AE v9 and up, a version check is automatically performed before each command for safety.
+	* It is strongly advised to test thoroughly in NON-PROD environments.
 
 ## List of Binaries:
 
