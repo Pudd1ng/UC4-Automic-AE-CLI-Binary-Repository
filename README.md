@@ -53,6 +53,20 @@ Each binary is designed to be SAFE and comes with a **mandatory COMMIT mechanism
 
 	**## OBJECT Specific CLI Binaries:**
 
+		* CALE_Update.jar: Update / import CALE Objects from JSON files. 
+		* AGENTS_Management.jar: Manage Agents from Client 0 (assign to other clients, delete, etc.) (ex: allow all clients to use Agent WIN01 for Execution)
+		* CHANGES_Show.jar: 	Display content of Audit Trail with filters (needs to be activated in Client 0 first)	
+		* CONN_Update.jar:	Update CONN Objects (including RA CONN such as SOAP or REST CONNs)
+		* JOBS_RA_Update.jar:	Update RA Jobs (SOAP, REST, FTP, etc.)
+		* JSCH_Update.jar:	Update SCHED Objects
+		* LOGIN_Update.jar:	Update LOGIN Objects
+		* STORAGE_Update.jar:	Update STORAGE Objects (only v11.2 and up)
+		* TASKS_Operations.jar: Handle Operations on Activities Window (Deactivate all "Completed" tasks, restart aborted JOBS tasks with title matching ".*DEV.*")
+		* USER_Update.jar:	Update USER Objects
+		* VARA_SQL_Update.jar:	Update SQL VARA Objects
+		* VARA_SQLI_Update.jar:	Update SQLI VARA Objects
+		* VARA_STATIC_Update.jar: Update STATIC & XML VARA Objects (XML VARA is a subtype of STATIC)
+		* VARA_Update.jar:	Update General Properties of VARA Objects
 		* JOBF_Update.jar:      Update JOBF Objects. (ex: change the pattern for Destination File in all JOBF objects at once)
 		* JOBP_Update.jar:      Update JOBP Objects. (ex: update all task names for all Workflows at once)
 		* JOBS_SQL_Update.jar:  Update JOBS_SQL Objects (ex: modify the Database Connection name in all JOBS_SQL containing "*SQL1*" in their name)
@@ -60,17 +74,15 @@ Each binary is designed to be SAFE and comes with a **mandatory COMMIT mechanism
 
 	**## GENERAL CLI Binaries:**
 
-		* OBJECTS_Copy_Across_Clients.jar: Copy Objects Across Clients (v11 only for now).
+		* OBJECTS_Delete.jar: Delete Objects of any type. (with regular expressions...)
 		* OBJECTS_Create.jar: Create Objects of any type. (ex: create 200 JOBS Objects)
 		* OBJECTS_Duplicate.jar: Duplicate Objects of any type. (ex: duplicate all objects matching name "*AB*PROD*" to "*AB*DEV*" at once)
+		* OBJECTS_Export_Import.jar: Import & Export Objects and dependencies (v11.2 and up)
 		* OBJECTS_Execute.jar: Execute now or schedule later (executable) Objects. (ex: run now all JOBP matching name "*DEV*JOBP*")
-		* OBJECTS_List.jar: -- Legacy Binary. Does not do much.
 		* OBJECTS_Move.jar: Move Objects of any type anywhere (within the same client) (ex: move all objects matching "*PROD*ABC*" to Folder "SANDBOX")
 		* OBJECTS_Rename.jar: Rename Objects of any type (ex: rename objects with title matching ".*Legacy.*" from "*ALPHA*" to "*BETA*")
-		* OBJECTS_Show.jar: -- Legacy Binary. Does not do much.
-		* TASKS_Operations.jar: Handle Operations on Activities Window (Deactivate all "Completed" tasks, restart aborted JOBS tasks with title matching ".*DEV.*")
 		* UTIL_ClientAudit.jar: Extract an Audit Report on Specific Client Usage (ex: number of active objects defined, etc.) 
 		* UTIL_EnvironmentAudit.jar: Extract Environment Wide Usage Report (ex: number of clients defined, etc.)
-		* AGENTS_Management.jar: Manage Agents from Client 0 (assign to other clients, delete, etc.) (ex: allow all clients to use Agent WIN01 for Execution)
+		
 		
 
