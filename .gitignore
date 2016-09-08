@@ -4,4 +4,5 @@
 *.csv
 connection.config
 Z_*
+INTERNAL_*
 Trace*
