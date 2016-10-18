@@ -16,12 +16,14 @@ provide a repository of **Command Line Interface Binaries** in order to extend t
 
 **Each binary needs to establish a connection to the Automation Engine. The connection parameters can be set either:**
 * directly in the **connection.config** file
-* via CLI parameters (see **-help** option for list of available parameters: **-L login -W pwd -C client -D department -H hostname** etc.)
+* in any other config file of your choice
+* via CLI parameters (see **-help** option for list of available parameters: **-L login -W password -C client -D department -H hostname -P port -F filename ** etc.)
 * Note: IF a parameter is specified both in connection.config and via a CLI parameter, the CLI parameter takes precedence. 
+* Note: the Password can be passed in encrypted form both in the config file and thru the command line (see usage of ucybcryp.exe to encrypt your password)
 
 ## CONFIGURATION Files:
 
-* **connection.config**: contains connection parameters. This file is used by all binaries. All the parameters specified in it can be overriden when using any of the binaries. use -help flag to review override parameters.
+* **connection.config**: contains connection parameters. This file is used by all binaries. All the parameters specified in it can be overriden when using any of the binaries. use -help flag to review override parameters. Alternatively, you can create several config files and use the -F flag to use a specific one.
 	
 ## Safety:
 
@@ -47,7 +49,7 @@ Each binary is designed to be SAFE and comes with a **mandatory COMMIT mechanism
 ## Compatibility:
 
 	* Requires Java v1.6 minimum.
-	* All Binaries compiled with most current version (v11.2) uc4.jar files (meaning it handles new objects like STORAGE, PERIOD, XML VARIABLE etc.)
+	* All Binaries compiled with most current version (v12.0) uc4.jar files (meaning it handles new objects like STORAGE, PERIOD, XML VARIABLE etc.)
 	* All Binaries (unless indicated) are compatible with AE v9 and up, a version check is automatically performed before each command for safety.
 	* It is strongly advised to test thoroughly in NON-PROD environments.
 
@@ -57,6 +59,7 @@ Each binary is designed to be SAFE and comes with a **mandatory COMMIT mechanism
 
 		* CALE_Update.jar: Update / import CALE Objects from JSON files. 
 		* AGENTS_Management.jar: Manage Agents from Client 0 (assign to other clients, delete, etc.) (ex: allow all clients to use Agent WIN01 for Execution)
+		* HOSTGROUPS_Management.jar: Manage Hostgroups (add agents, run simulations, remove agents, etc.)
 		* CHANGES_Show.jar: 	Display content of Audit Trail with filters (needs to be activated in Client 0 first)	
 		* CONN_Update.jar:	Update CONN Objects (including RA CONN such as SOAP or REST CONNs)
 		* JOBS_RA_Update.jar:	Update RA Jobs (SOAP, REST, FTP, etc.)
@@ -85,6 +88,7 @@ Each binary is designed to be SAFE and comes with a **mandatory COMMIT mechanism
 		* OBJECTS_Rename.jar: Rename Objects of any type (ex: rename objects with title matching ".*Legacy.*" from "*ALPHA*" to "*BETA*")
 		* UTIL_ClientAudit.jar: Extract an Audit Report on Specific Client Usage (ex: number of active objects defined, etc.) 
 		* UTIL_EnvironmentAudit.jar: Extract Environment Wide Usage Report (ex: number of clients defined, etc.)
+		* UTIL_SystemOverview_Show.jar: Extract Content of the System Overview into a parsable format (JSON)
 		
 		
 
