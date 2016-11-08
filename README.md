@@ -2,6 +2,9 @@
 
 **Repository of all CLI Binaries (all compiled CLI projects)**
 
+# Improvement / Feature Requests
+Feel free to open "issues" (even if they arent issues) on this page to request improvements & features.
+
 # Purpose:
 
 provide a repository of **Command Line Interface Binaries** in order to extend the capabilities that the UI currently offers.
