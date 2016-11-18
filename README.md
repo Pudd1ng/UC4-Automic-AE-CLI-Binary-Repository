@@ -2,10 +2,67 @@
 
 **Repository of all CLI Binaries (all compiled CLI projects)**
 
-# Improvement / Feature Requests
+## Improvement / Feature Requests
 Feel free to open "issues" (even if they arent issues) on this page to request improvements & features.
 
-# Purpose:
+---
+
+## FAQ (Frequently Asked Questions):
+
+### What parameter shows me the Connection Options i have?
+> the '-help' option will display the Connection parameters to specify Login, Pwd, Dept, Client etc.:
+
+> java -jar XXXX_XXXX.jar -help
+
+### What parameter shows me the options i have for a particular utility?
+> the '-h' option will display all parameters specific to the binary you are using:
+
+> java -jar XXXX_XXXX.jar -h
+
+### What are the '-f*' parameters for?
+
+> All the parameters that start with '-f*' are used to filter out objects for processing with other parameters. '-f*' parameters tend to accept full Regular Expressions.
+
+### What is the difference between the parameter -name and the parameter -f_name?
+
+> The parameter -name only accept 'UC4 RegEx', meaning either full names or expressions with '*' and '?' but NOT full Regular Expressions.
+
+> The parameter -f_name always accepts full Regular Expressions. 
+
+### Why is there 2 different parameters to filter on Object Names (-name and -f_name)?
+
+> For Performance. -name searches are done first on the backend, and they are much faster than any other search mechanism (but can only search on limited patterns). -name is used to make a fast preselection of Objects which are then looked at for further filtering by the -f_name option (or any combination of -f option).
+
+> In small environments, you can use the -f_name option, but in larger environments the performance will be significantly better if using a combination of both.
+
+### What is the commit parameter for?
+
+> For Safety. Without it, update commands will only run a simulation of updates. Only of the commit parameter is specified will the update actually occur. This allows to test 'en-masse' updates before actually modifying anything.
+
+### I dont want to pass the Password in the command in clear text. What can i do?
+
+> You have several options. You can encrypt the password with the Automic utility (UCYBCRYPT.exe) and pass the encrypted password with option -W (just like you would do with a clear text password.)
+
+> You can also pass the password in memory using an environment variable (AE_PWD)
+
+> You can also specify the password in an encrypted form in the connection.config file
+
+### Does this CLI support Single SignOn? 
+
+> Yes. SSO needs to be configured on your system obviously. The corresponding option to use is '--sso', in which case you dont need to specify Dept, Login or Password anywhere.
+
+
+### The command I'm using keep telling me the format of my parameter is wrong.. what do I do?
+
+> Take a close look at the help of the binary you are using ('-h' option). Each option should explicitly require a specific format.
+
+> some require "['Some RegEx','a string']" while some others are simpler and require only "[some value,some other value]"
+
+> if you are using the strict format but are still getting an error, contact me please!
+
+
+---
+## Purpose:
 
 provide a repository of **Command Line Interface Binaries** in order to extend the capabilities that the UI currently offers.
 
