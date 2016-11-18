@@ -2,7 +2,17 @@
 
 **Repository of all CLI Binaries (all compiled CLI projects)**
 
-## Improvement / Feature Requests
+---
+
+## Getting Help and Examples for each command:
+
+Consult the wiki page here for examples and help on specific commands:
+https://github.com/brendanSapience/UC4-Automic-AE-CLI-Binary-Repository/wiki
+
+---
+
+## Improvement / Feature Requests:
+
 Feel free to open "issues" (even if they arent issues) on this page to request improvements & features.
 
 ---
