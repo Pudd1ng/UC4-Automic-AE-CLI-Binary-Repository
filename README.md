@@ -13,7 +13,8 @@ https://github.com/brendanSapience/UC4-Automic-AE-CLI-Binary-Repository/wiki
 
 ## Improvement / Feature Requests:
 
-Feel free to open "issues" (even if they arent issues) on this page to request improvements & features.
+Feel free to open "issues" (even if they arent issues) on this page to request improvements & features:
+https://github.com/brendanSapience/UC4-Automic-AE-CLI-Binary-Repository/issues
 
 ---
 
