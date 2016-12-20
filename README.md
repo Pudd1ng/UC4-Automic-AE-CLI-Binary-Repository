@@ -25,6 +25,13 @@ https://github.com/brendanSapience/UC4-Automic-AE-CLI-Binary-Repository/issues
 
 > java -jar XXXX_XXXX.jar -help
 
+### Can I use this on an active-active Automation Engine?
+> Yes. The -X and -N options can be used to handle this natively. You can copy your existing uc4config.xml file where the CLI binaries are and use the option -N to specify which Connection Name to use (from the xml file). You can specify an alternate xml file using -X option.
+
+
+> java -jar XXXX_XXXX.jar -help
+
+
 ### What parameter shows me the options i have for a particular utility?
 > the '-h' option will display all parameters specific to the binary you are using:
 
