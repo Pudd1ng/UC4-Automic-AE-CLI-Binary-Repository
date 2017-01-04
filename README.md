@@ -3,7 +3,12 @@
 **Repository of all CLI Binaries (all compiled CLI projects)**
 
 ---
+## Get the list of latest features added:
 
+Consult the wiki page here for a list of recently added features:
+https://github.com/brendanSapience/UC4-Automic-AE-CLI-Binary-Repository/wiki
+
+---
 ## Getting Help and Examples for each command:
 
 Consult the wiki page here for examples and help on specific commands:
